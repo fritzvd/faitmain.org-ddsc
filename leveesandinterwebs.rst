@@ -9,3 +9,4 @@ As a datum the IJkdijk foundation built a levee with all kinds of sensors that c
 
 If all levees are to be equipped with these sensors this will result in mountains of data to keep track of. This is what we built a big platform around at where I work (http://nelen-schuurmans.nl). To facilitate the sensors that all lock into sockets or upload stuff to some server, we collect the data and display it.
 
+.. image:: http://github.com/intuited/grainery-db/raw/dist/screenshot.png
