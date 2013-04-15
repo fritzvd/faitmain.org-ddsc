@@ -22,6 +22,19 @@ If all levees are to be equipped with these sensors this will result in mountain
 
 Data Storage & Collection
 --------
-All kinds of sensors are being crammed into the levees: temperature, soil moisture content, acidity etc. These sensors are simple and d. To be able to 
-The sensor data is stored in Cassandra nodes (http://cassandra.apache.org/) with the metadata and the latest values cached in a Postgres/PostGIS database.
+All kinds of sensors are being crammed into the levees: temperature, soil moisture content, acidity etc. These sensors are managed by another party so the real technical of that side of the story can be found on http://www.ijkdijk.nl/en/ . When the sensors have collected their data it can be delivered to our servers in several ways. It can be uploaded to an FTP server, connected to a Socket Server that listens to new incoming data, it can be imported through a specific XML document or it
+can talk to our REST API. The sensor data is stored in Cassandra nodes (http://cassandra.apache.org/) with the metadata and the latest values cached in a Postgres/PostGIS database.
+
+Web client
+--------
+Our webclient gets it data from the same REST API that the sensors can talk to. The main thing to tackle here was displaying data as information to the user. Condensing a few million data points to meaningful information. The data is not only temporal it is also carries spatial significance. In stead of just delivering a big sandbox of data points we have decided to help the user focus on important things. The user is presented with a home page that shows an overview of important events.
+
+The map view
+
+Final thoughts
+-------------
+We're still figuring out a "simple" solution of getting live data into a webclient that both specialists and (non-technical) decision makers can use. But we have made a lot of headway by: 
+* Introducing preset graphs
+* Only allowing to plot as much data points as there are pixels in the viewport of the user
+* Displaying information when necessary.
 
