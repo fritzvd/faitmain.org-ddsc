@@ -25,11 +25,13 @@ Data Storage & Collection
 All kinds of sensors are being crammed into the levees: temperature, soil moisture content, acidity etc. These sensors are managed by another party so the real technical of that side of the story can be found on http://www.ijkdijk.nl/en/ . When the sensors have collected their data it can be delivered to our servers in several ways. It can be uploaded to an FTP server, connected to a Socket Server that listens to new incoming data, it can be imported through a specific XML document or it
 can talk to our REST API. The sensor data is stored in Cassandra nodes (http://cassandra.apache.org/) with the metadata and the latest values cached in a Postgres/PostGIS database.
 
+Our REST API is built around the Django REST Framework, because we all know Python and Django at our office. 
+
 Web client
 --------
 Our webclient gets it data from the same REST API that the sensors can talk to. The main thing to tackle here was displaying data as information to the user. Condensing a few million data points to meaningful information. The data is not only temporal it is also carries spatial significance. In stead of just delivering a big sandbox of data points we have decided to help the user focus on important things. The user is presented with a home page that shows an overview of important events.
 
-The map view
+The map view was kind of difficult to come up with, because in quite a limited space, lots of different sensors are collecting data. How do you categorize, how do you
 
 Final thoughts
 -------------
