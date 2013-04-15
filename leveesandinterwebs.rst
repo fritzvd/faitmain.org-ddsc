@@ -20,5 +20,8 @@ As a datum the IJkdijk foundation built a levee with all kinds of sensors that c
 
 If all levees are to be equipped with these sensors this will result in mountains of data to keep track of. At http://nelen-schuurmans.nl we tried to solve this part of the story. With the Dijk Data Service Center (levee data service center), we built a system to store and display all this data.
 
+Data Storage & Collection
+--------
+All kinds of sensors are being crammed into the levees: temperature, soil moisture content, acidity etc. These sensors are simple and d. To be able to 
 The sensor data is stored in Cassandra nodes (http://cassandra.apache.org/) with the metadata and the latest values cached in a Postgres/PostGIS database.
 
